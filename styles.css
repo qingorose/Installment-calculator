@@ -1,0 +1,47 @@
+body {
+        background-image: url(images/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: Arial;
+      }
+
+.debt-list, 
+.debt-input-grid,
+.payment-reminder {
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px 120px;
+  column-gap: 50px;
+  row-gap: 15px;
+  align-items: center;
+}
+
+.debt-input-grid,
+.debt-list,
+.payment-reminder {
+  margin-bottom: 15px;
+  align-items: stretch;
+}
+
+.amount-input,
+.name-input,
+.months-input,
+.date-input {
+  width: 135px;
+}
+
+.add-button {
+  background-color: pink;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.delete-button{
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

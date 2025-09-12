@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Monthly Payments</title>
+    <link 
+    rel="stylesheet" 
+    href="styles.css">
+  </head>
+  <body>
+    <p>My Monthly Payments</p>
+    <div class="debt-input-grid">
+      <input placeholder="Name of the Purchase" required
+        class="js-name-input name-input">
+      <input type="text" placeholder="Purchase Amount €" inputmode="decimal" pattern="^\d+(\.\d{1,2})?$" required
+        class="js-amount-input amount-input">
+      <input type="number" placeholder="Months" class="js-months months-input" name="quantity" min="2" max="12" step="1">
+      <input type="date"
+        class="js-date-input date-input">
+
+      <button class="add-button js-add-button">
+        Add
+      </button>
+    </div>
+
+    <div class="js-payment-reminder payment-reminder">
+    </div>
+    
+    <div class="js-debt-list debt-list">
+    </div>
+
+    <div class="js-monthly-payment monthly-payment">
+      <button class="check-button js-check-button">
+        Check my future monthly payment
+      </button>
+      <div class="js-payment-list payment-list">
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
