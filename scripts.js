@@ -8,10 +8,8 @@ function saveToLocalStorage() {
   localStorage.setItem('monthlyPaymentList', JSON.stringify(monthlyPaymentList));
 }
 
-listsGenerator();
-
 renderDebtList();
-// renderPaymentReminder();
+
 
 function renderDebtList() {
   let debtListHTML = `
@@ -49,18 +47,6 @@ function renderDebtList() {
     })
 }
 
-function currentMonthlyPayment() {
-    let totalMonthlyPayment = 0;
-    let currentMonthpayment = 0;
-    debtList.forEach((debtObject, index) => {
-      const amount = debtObject.amount;
-      const months = debtObject.months;
-      currentMonthpayment = amount/months;
-      totalMonthlyPayment += currentMonthpayment;
-    }); 
-      return totalMonthlyPayment;
-    };
-
 function listsGenerator() {
   let currentMonthpayment = 0;
   debtList.forEach((debtObject, index) => {
@@ -91,6 +77,7 @@ function listsGenerator() {
 }
 
 function renderPaymentList() {
+  listsGenerator();
   let dictionary = {};
   dictionary = {1: "January", 2: "February",3:"March",4:"April",5:"May",6:"June",7:"July",8:"August",9:"September",10:"October",11:"November",12:"December"};
   const today = new Date();
@@ -119,6 +106,7 @@ function renderPaymentList() {
     const html = `
     <div>${paymentYear} ${paymentMonth}:</div>
     <div>${totalPayment}€</div>
+    <div>&nbsp;</div>
     `;
     paymentListHTML += html;
   }
