@@ -105,7 +105,7 @@ function renderPaymentList() {
     }
     const html = `
     <div>${paymentYear} ${paymentMonth}:</div>
-    <div>${totalPayment}€</div>
+    <div>${totalPayment.toFixed(2)}€</div>
     <div>&nbsp;</div>
     `;
     paymentListHTML += html;
